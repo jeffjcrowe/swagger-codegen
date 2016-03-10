@@ -86,7 +86,7 @@ public class JavaJerseyServerCodegen extends AbstractJavaJAXRSServerCodegen
         supportingFiles.add(new SupportingFile("ApiResponseMessage.mustache", (sourceFolder + '/' + apiPackage).replace(".", "/"), "ApiResponseMessage.java"));
         supportingFiles.add(new SupportingFile("NotFoundException.mustache", (sourceFolder + '/' + apiPackage).replace(".", "/"), "NotFoundException.java"));
         writeOptional(outputFolder, new SupportingFile("web.mustache", ("src/main/webapp/WEB-INF"), "web.xml"));
-        supportingFiles.add(new SupportingFile("StringUtil.mustache", (sourceFolder + '/' + apiPackage).replace(".", "/"), "StringUtil.java"));
+        supportingFiles.add(new SupportingFile("StringUtil.mustache", (sourceFolder + '/' + invokerPackage).replace(".", "/"), "StringUtil.java"));
 
         if ( additionalProperties.containsKey("dateLibrary") ) {
             setDateLibrary(additionalProperties.get("dateLibrary").toString());
